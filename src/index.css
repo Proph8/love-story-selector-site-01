@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -109,7 +110,7 @@
   }
   
   .bride-heading {
-    @apply font-serif text-bride-heading tracking-wide;
+    @apply font-sans text-bride-heading tracking-tight;
   }
   
   .groom-theme {
@@ -117,7 +118,7 @@
   }
   
   .groom-heading {
-    @apply font-serif text-groom-heading tracking-tight ;
+    @apply font-serif text-groom-heading tracking-wide;
   }
   
   .theme-transition {
