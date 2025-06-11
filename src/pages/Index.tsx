@@ -23,10 +23,8 @@ const Index = () => {
   const handleTap = (side: 'bride' | 'groom') => {
     if (isMobile) {
       if (expandedSide === side) {
-        // Do nothing if already expanded - allow button tap
         return;
       } else {
-        // Immediate expansion for mobile - no delays
         setExpandedSide(side);
       }
     }
@@ -70,14 +68,14 @@ const Index = () => {
 
   return (
     <div className={containerClass}>
-      {/* Bride Side */}
+      {/* Bride Side - now with dark theme but keeps Nikkah content */}
       <div
         className={getSideClasses('bride')}
         onMouseEnter={() => !isMobile && setHoveredSide('bride')}
         onMouseLeave={() => !isMobile && setHoveredSide(null)}
         onClick={() => handleTap('bride')}
         style={{
-          backgroundImage: "linear-gradient(to bottom, rgba(245, 245, 220, 0.9), rgba(203, 183, 153, 0.9)), url('https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&q=80')",
+          backgroundImage: "linear-gradient(to bottom, rgba(27, 27, 27, 0.85), rgba(10, 18, 42, 0.9)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80')",
           backgroundSize: "cover",
           backgroundPosition: "center"
         }}
@@ -89,7 +87,6 @@ const Index = () => {
           <p className="text-bride-text mb-8  animate-slide-up">
             Join us for the Nikkah ceremony at Kumarakom.
           </p>
-          {/* Only show button if on desktop or if this side is expanded on mobile */}
           {(!isMobile || expandedSide === 'bride') && (
             <Button
               onClick={() => handleSelectSide('bride')}
@@ -103,14 +100,14 @@ const Index = () => {
         </div>
       </div>
       
-      {/* Groom Side */}
+      {/* Groom Side - now with beige theme but keeps reception content */}
       <div
         className={getSideClasses('groom')}
         onMouseEnter={() => !isMobile && setHoveredSide('groom')}
         onMouseLeave={() => !isMobile && setHoveredSide(null)}
         onClick={() => handleTap('groom')}
         style={{
-          backgroundImage: "linear-gradient(to bottom, rgba(27, 27, 27, 0.85), rgba(10, 18, 42, 0.9)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80')",
+          backgroundImage: "linear-gradient(to bottom, rgba(245, 245, 220, 0.9), rgba(203, 183, 153, 0.9)), url('https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&q=80')",
           backgroundSize: "cover",
           backgroundPosition: "center"
         }}
@@ -122,7 +119,6 @@ const Index = () => {
           <p className="text-groom-text mb-8 animate-slide-up">
             Join as for the wedding reception at the groom's hometown.
           </p>
-          {/* Only show button if on desktop or if this side is expanded on mobile */}
           {(!isMobile || expandedSide === 'groom') && (
             <Button
               onClick={() => handleSelectSide('groom')}

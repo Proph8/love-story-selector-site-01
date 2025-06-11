@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -29,23 +30,23 @@ export default {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         
-        // Bride theme colors
+        // Bride theme colors - now dark blue theme
         bride: {
-          background: '#F5F5DC', // Beige
-          accent: '#CBB799', // Khaki
-          text: '#6F4D38', // Coffee
-          heading: '#3D211A', // Bistre
-          border: '#A07856', // Chamoisee
-        },
-        
-        // Updated Groom theme colors with new sophisticated dark palette
-        groom: {
           background: '#1B1B1B', // Eclipse Black
           accent: '#24476C', // Astral Blue
           text: '#E6E8E6', // Stardust White
           heading: '#E6E8E6', // Stardust White
           border: '#A8A9AD', // Moonlight Gray
           secondary: '#0A122A', // Midnight Navy
+        },
+        
+        // Groom theme colors - now beige theme
+        groom: {
+          background: '#F5F5DC', // Beige
+          accent: '#CBB799', // Khaki
+          text: '#6F4D38', // Coffee
+          heading: '#3D211A', // Bistre
+          border: '#A07856', // Chamoisee
         },
         
         primary: {
